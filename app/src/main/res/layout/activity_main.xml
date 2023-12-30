@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232D3F"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/signout"
+        android:onClick="signout"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/signout"
+        />
+    <TextView
+        android:id="@+id/maintext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:text="All Notes"
+        android:gravity="center"
+        android:layout_below="@id/signout"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/maintext"
+        android:layout_above="@id/floatingActionButton"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:id="@+id/fetchedData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="Nothing to Display"
+            android:padding="10dp"
+            android:background="@drawable/border"
+            />
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:onClick="createNewNote"
+        android:src="@drawable/baseline_add_24"
+        />
+</RelativeLayout>
